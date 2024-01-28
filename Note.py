@@ -73,9 +73,6 @@ class Note:
             if 0 <= diff.days < 1 and rec.is_active is True:
                 print(rec)
 
-    def save_to_file(self, file="data.json"):
-        with open(file, "w") as wf:
-            json.dump(self.records, wf, indent=4, default=class_to_dict)
 
     def load_from_file(self, file="data.json"):
         with open(file, "r") as rf:
